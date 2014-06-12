@@ -53,6 +53,24 @@ body{
     position: absolute;
     float: left;
     top: 0;
+    height: 0;
+  }
+  .hidden{
+    position: absolute;
+    padding:1em;
+    display: block;
+    color: #fff;
+    background: rgba(black, .98);
+    margin-top: -5em;
+    font-weight: bold;
+  }
+  s{
+    color: #FA598D;
+
+    &:hover{
+     + .hidden{display: block !important;visibility: visible !important;}
+     + *:not(:hover){opacity: .6}
+    }
   }
 }
 .container {
