@@ -49,6 +49,10 @@ body {
   color: #17a689;
   background: #f3f3f3;
   padding-top: 100px; }
+  body svg {
+    position: absolute;
+    float: left;
+    top: 0; }
 
 .container {
   max-width: 830px; }
@@ -164,6 +168,8 @@ body {
 
 .footer a {
   color: #17a689; }
+.footer span.right {
+  float: right; }
 
 /* Blurred class
 
