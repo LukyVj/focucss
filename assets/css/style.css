@@ -110,6 +110,7 @@ body {
     height: 0; }
 
 .sidebar {
+  will-change: animation, position, transition, left;
   position: fixed;
   z-index: 9999999;
   left: 0;
