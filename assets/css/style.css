@@ -1,0 +1,201 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://weloveiconfonts.com/api/?family=openwebicons);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+@import url(http://weloveiconfonts.com/api/?family=fontelico);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  line-height: 34px; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  float: left; }
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: "entypo", sans-serif; }
+
+/* openwebicons */
+[class*="openwebicons-"]:before {
+  font-family: "openwebicons", sans-serif; }
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: "fontawesome", sans-serif; }
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: "zocial", sans-serif; }
+
+/* fontelico */
+[class*="fontelico-"]:before {
+  font-family: "fontelico", sans-serif; }
+
+/* Fix OPW
+----------------------------------------------------------*/
+/* openwebicons */
+[class*="openwebicons-"]:before {
+  font-family: 'OpenWeb Icons', sans-serif; }
+
+body {
+  color: #17a689;
+  background: #f3f3f3;
+  padding-top: 100px; }
+
+.container {
+  max-width: 830px; }
+
+.header .text-muted {
+  padding: .4em .8em; }
+  .header .text-muted span:hover {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    filter: url(#blurLogo);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1'); }
+  .header .text-muted span span.bl {
+    font-weight: 400;
+    -webkit-animation: blur 5s ease infinite;
+    -moz-animation: blur 5s ease infinite;
+    animation: blur 5s ease infinite; }
+  .header .text-muted .starter {
+    float: right;
+    line-height: 2.5;
+    color: #17a689; }
+
+.nav li:hover a {
+  background: transparent; }
+  .nav li:hover a span {
+    background: #1abc9c;
+    color: #f3f3f3; }
+.nav li a {
+  color: #17a689;
+  line-height: 3; }
+  .nav li a.active span {
+    background: #1abc9c;
+    color: #f3f3f3; }
+  .nav li a span {
+    box-shadow: inset 0 0 0 0.1em #1abc9c;
+    font-size: 1.6em;
+    padding: .2em .4em;
+    height: 30px !important;
+    border-radius: 3px; }
+
+/* Jumbotron
+----------------------------------------------*/
+.jumbotron {
+  color: #fff;
+  background: #1abc9c; }
+
+/* Sidebar
+-----------------------------------------------------------------------------------------*/
+.menusign {
+  display: block;
+  width: 10px;
+  line-height: .3;
+  font-size: 2em;
+  margin: .5em; }
+  .menusign br {
+    height: 0; }
+
+.sidebar {
+  position: fixed;
+  z-index: 9999999;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 260px;
+  background: #f3f3f3;
+  -webkit-transition: left 0.3s ease, box-shadow 0.3s ease 0.2s;
+  -moz-transition: left 0.3s ease, box-shadow 0.3s ease 0.2s;
+  transition: left 0.3s ease, box-shadow 0.3s ease 0.2s;
+  box-shadow: 0.5em 0 0 0 #1abc9c, 0.6em 0 0 0 #17a689; }
+  .sidebar #close {
+    float: right;
+    margin: -5.5rem 1rem;
+    font-size: 1.4em;
+    color: #fa598d;
+    text-align: right; }
+  .sidebar.closed {
+    left: -260px;
+    box-shadow: 0 0 0 #1abc9c; }
+  .sidebar h2 {
+    padding: .5em;
+    color: #1abc9c; }
+  .sidebar ul {
+    padding: 0;
+    margin: 0; }
+    .sidebar ul li {
+      width: 90%;
+      margin: 5px 10px;
+      float: left;
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding: 3px 6px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      border-radius: 4px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 2px solid #1abc9c;
+      background: #1abc9c;
+      color: #f3f3f3; }
+      .sidebar ul li a {
+        color: white; }
+      .sidebar ul li:hover {
+        background: #17a689;
+        border-color: #17a689; }
+
+.footer a {
+  color: #17a689; }
+
+/* Blurred class
+
+This class is added to the container
+(#blurMe) when the sidebar is open.
+-----------------------------------*/
+.blurred {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  filter: url(#blur);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10'); }
+
+/* Logo effect
+-----------------------------*/
+@-webkit-keyframes blur {
+  66% {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    filter: url(#blurLogo);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1'); } }
+@-moz-keyframes blur {
+  66% {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    filter: url(#blurLogo);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1'); } }
+@keyframes blur {
+  66% {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    filter: url(#blurLogo);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1'); } }

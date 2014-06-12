@@ -1,0 +1,232 @@
+@import 'bourbon/_bourbon';
+$base-font-weight:300;
+$base-line-height:34px;
+@mixin reset {
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  float:left;
+}
+@mixin high{
+  @include box-sizing(border-box);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight:$base-font-weight;
+  line-height:$base-line-height;
+}
+*{
+  @include high();
+}
+
+html,body{
+  @include reset();
+}
+$types: "entypo",  "openwebicons" , "fontawesome", "zocial", "fontelico";
+
+@each $type in $types {
+  @import url(http://weloveiconfonts.com/api/?family=#{$type});
+  /* #{($type)} */
+  [class*="#{$type}-"]:before {
+    font-family: '#{$type}', sans-serif;
+  }
+}
+/* Fix OPW
+----------------------------------------------------------*/
+/* openwebicons */
+[class*="openwebicons-"]:before {
+  font-family: 'OpenWeb Icons', sans-serif;
+}
+
+$types: "entypo";
+$color: #1abc9c;
+$c: $color;
+$white: #F3F3F3;
+$color-theme: $c;
+
+body{
+  color: darken($c, 5%);
+  background: $white;
+  padding-top: 100px;
+
+
+}
+.container {
+max-width: 830px;
+}
+.header{
+  .text-muted{
+    padding: .4em .8em;
+    span{
+      &:hover{
+        -webkit-filter: blur(1px); // Webkit
+        filter: blur(1px);
+        filter: url(#blurLogo); // Firefox
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1'); // IE
+      }
+      span.bl{
+        font-weight: 400;
+        @include animation(blur 5s ease infinite)
+          }
+    }
+    .starter{
+      float:right;
+      line-height: 2.5;
+      color: darken($c, 5%);
+    }
+  }
+}
+.nav{
+  li{
+    &:hover{
+      a{background: transparent;
+        span{
+          background: $c;
+          color: $white;
+        }
+      }
+    }
+    a{
+      color: darken($c, 5%);
+      line-height:3;
+      &.active{
+        span{
+          background: $c;
+          color: $white;
+        }
+      }
+      span{
+        box-shadow: inset 0 0 0 .1em $c;
+        font-size: 1.6em;
+        padding:.2em .4em;
+        height: 30px !important;
+        border-radius: 3px;
+
+
+      }
+    }
+  }
+}
+
+
+/* Jumbotron
+----------------------------------------------*/
+.jumbotron{
+  color: #fff;
+  background: $c;
+}
+
+/* Sidebar
+-----------------------------------------------------------------------------------------*/
+$sidebar-width: 260px;
+.menusign{
+  display: block;
+  width: 10px;
+  line-height:.3;
+  font-size: 2em;
+  margin: .5em;
+  br{height: 0}
+}
+.sidebar{
+  position: fixed;
+  z-index: 9999999;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: $sidebar-width;
+  background: $white;
+  @include transition(left .3s ease, box-shadow .3s ease .2s);
+  box-shadow: .5em 0 0 0 $c, .6em 0 0 0 darken($c, 5%);
+  #close{
+    float: right;
+    margin: -5.5rem 1rem;
+    font-size:1.4em;
+    color:lighten(#F9276B, 10%);
+    text-align: right;
+  }
+  &.closed{
+    left: -$sidebar-width;
+    box-shadow: 0 0 0 $color-theme;
+  }
+  h2{
+    padding: .5em;
+    color: $c;
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+
+    li{
+      width: 90%;
+      margin:5px 10px;
+      float: left;
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding: 3px 6px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      border-radius: 4px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 2px solid $c;
+
+      background: $c;
+      color: $white;
+      a{color: white;}
+
+      &:hover{
+        background: darken($c, 5%);
+        border-color: darken($c, 5%);
+      }
+    }
+  }
+
+
+}
+.footer{
+  a{
+    color:darken($c, 5%)
+  }
+}
+
+
+/* Blurred class
+
+This class is added to the container
+(#blurMe) when the sidebar is open.
+-----------------------------------*/
+
+.blurred{
+  @include transition(all .6s ease);
+
+  -webkit-filter: blur(10px); // Webkit
+  filter: blur(10px);
+  filter: url(#blur); // Firefox
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='10'); // IE
+}
+
+
+
+
+/* Logo effect
+-----------------------------*/
+@include keyframes(blur){
+  66%{
+    -webkit-filter: blur(1px); // Webkit
+    filter: blur(1px);
+    filter: url(#blurLogo); // Firefox
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1'); // IE
+  }
+}
+
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title Page</title>
+    <meta charset="UTF-8">
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  </head>
+  <body>
+
+    <div class="container">
+  <div class="header fixed-header navbar-default navbar-fixed-top" role="navigation">
+
+    <ul class="nav nav-pills pull-right">
+      <li><a href="#" id="trigger"><span class="entypo-menu"></span></a></li>
+    </ul>
+    <h3 class="text-muted"><span>Focu<span class="bl">css</span></span> <small class="starter"> Click the menu icon to see it live <span class="entypo-right-thin"></span></small></h3>
+  </div>
+  <div></div>
+  <div class="sidebar closed">
+    <header>
+      <h2>Sidebar</h2> <a href="#" id="close"><span class="entypo-cancel"></span></a>
+    </header>
+    <ul>
+      <li><a href="#">A link</a></li>
+      <li><a href="#">A link</a></li>
+      <li><a href="#">A link</a></li>
+      <li><a href="#">A link</a></li>
+      <li><a href="#">A link</a></li>
+      <li><a href="#">A link</a></li>
+      <li><a href="#">A link</a></li>
+    </ul>
+  </div>
+  <div id="blurrMe">
+    <div class="jumbotron">
+      <h1>Focus your users, on your sidebar.</h1>
+      <p class="lead">With a bit of jquery, CSS and a SVG fallback, you will be able to create a cool blurring effect, that will focus your users on your sidebar.</p>
+
+    </div>
+
+    <div class="row marketing">
+      <div class="col-md-4">
+        <h4>Idea <span class="fontawesome-lightbulb"></span></h4>
+        <p>Focus the user on some sidebar content, and blurring the useless content.<br/> This way, the user can focus on your sidebar, and the blurred effect create a smooth & not-intrusive way to do it. </p>
+      </div>
+      <div class="col-md-4">
+
+        <h4>Cross-Browser <span class="zocial-chrome"></span> <span class="zocial-ie"></span> <span class="fontelico-firefox"></span></h4>
+        <p>Of course, we want it to work everywhere, or almost everywhere ;)</br>
+        The effect can be applied to <strong>Firefox</strong>, <strong>Webkit</strong> browsers (Chrome, Safari, etc) and <strong>IE</strong> </p>
+    </div>
+    <div class="col-md-4">
+      <h4>Use, Fork and share ! <span class="entypo-share"></span> </h4>
+      <p>If you liked the idea, and want to contribute, I will open a github repo dedicated to it soon, but you can fork it, modify it and/or use it as you want.</p>
+    </div>
+  </div>
+
+
+
+</div>
+
+<div class="footer">
+  <p><a href="http://twitter.com/lukyvj">@LukyVj</a> 2014</p>
+</div>
+</div>
+
+</div> <!-- /container -->
+<!-- SVG filter for Firefox -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="10" />
+  </filter>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <filter id="blurLogo">
+    <feGaussianBlur stdDeviation="1" />
+  </filter>
+</svg>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+  </body>
+</html>
